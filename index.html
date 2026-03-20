@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Classic Mode</p>
+            <h1>Snake</h1>
+          </div>
+          <button id="restart-button" class="button" type="button">Restart</button>
+        </div>
+
+        <div class="stats" aria-label="Game status">
+          <p>Score: <span id="score">0</span></p>
+          <p>Best: <span id="best-score">0</span></p>
+          <p>Status: <span id="status">Ready</span></p>
+        </div>
+
+        <div class="board-shell">
+          <div
+            id="game-board"
+            class="board"
+            role="grid"
+            aria-label="Snake game board"
+          ></div>
+        </div>
+
+        <div class="actions">
+          <button id="pause-button" class="button button--secondary" type="button">
+            Pause
+          </button>
+          <p class="hint">Use arrow keys or WASD to move. Press Space to pause.</p>
+        </div>
+
+        <div class="controls" aria-label="Touch controls">
+          <div class="controls__spacer"></div>
+          <button class="control-button" data-direction="up" type="button" aria-label="Move up">
+            ^
+          </button>
+          <div class="controls__spacer"></div>
+          <button class="control-button" data-direction="left" type="button" aria-label="Move left">
+            <
+          </button>
+          <button class="control-button" data-direction="down" type="button" aria-label="Move down">
+            v
+          </button>
+          <button class="control-button" data-direction="right" type="button" aria-label="Move right">
+            >
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
